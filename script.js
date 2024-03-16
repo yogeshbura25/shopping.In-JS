@@ -16,14 +16,22 @@ function displayData(data) {
         const div = document.createElement("div");
         div.classList.add("css-box");
         div.innerHTML = `
-        <img src="${info.images}" />
-        
+        <img src="${info.images}" alt="${info.title}"/>
         <h2>${info.title}</h2>
         <p>${info.description}</p>
         <div class="foot">
         <p class="price">Price: ${info.price}$</p>
-        <button>Place Order</button>
+        <button onclick="confirmOrder()">Place Order</button>
         </div>`;
         fecthDatafromURL.appendChild(div);
     });
+}
+
+
+function confirmOrder() {
+    if(true){
+        alert("Your Order is Confirmed!")
+    } else {
+        alert("Your Order is Canceled")
+    }
 }
