@@ -11,7 +11,7 @@ function fecthData() {
 fecthData();
 
 function displayData(data) {
-    const fecthDatafromURL = document.getElementById("fecthDatafromURL");
+    var fecthDatafromURL = document.getElementById("fecthDatafromURL");
     data.forEach(info => {
         const div = document.createElement("div");
         div.classList.add("css-box");
@@ -35,3 +35,5 @@ function confirmOrder() {
         alert("Your Order is Canceled")
     }
 }
+
+
