@@ -29,11 +29,30 @@ function displayData(data) {
 
 
 function confirmOrder() {
-    if(true){
-        alert("Your Order is Confirmed!")
+    const name = prompt("Enter your name:");
+    const address = prompt("Enter your address:");
+    if (name && address) {
+        alert("Your order has been successfully placed!");
     } else {
-        alert("Your Order is Canceled")
+        alert("Please provide both name and address to place the order.");
+    }
+}
+
+function submit() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username === "username" && password === "password") {
+        document.getElementById("shop-list").style.display = "block";
+        document.getElementById("login-page").style.display = "none";
+        document.getElementById("back-button").style.display = "block";
+    } else {
+        alert("Please Enter Correct Details");
     }
 }
 
 
+function back() {
+    document.getElementById("shop-list").style.display = "none";
+    document.getElementById("login-page").style.display = "block";
+}
