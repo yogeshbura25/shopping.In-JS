@@ -30,8 +30,9 @@ function displayData(data) {
 
 function confirmOrder() {
     const name = prompt("Enter your name:");
+    const mobileNumber = prompt("Enter your mobile number:")
     const address = prompt("Enter your address:");
-    if (name && address) {
+    if (name && address && mobileNumber) {
         alert("Your order has been successfully placed!");
     } else {
         alert("Please provide both name and address to place the order.");
@@ -54,5 +55,9 @@ function submit() {
 
 function back() {
     document.getElementById("shop-list").style.display = "none";
-    document.getElementById("login-page").style.display = "block";
+    document.getElementById("login-page").style.display = "flex";
+    document.getElementById("back-button").style.display = "none";
+    document.getElementById("login-box").style.visibility = "visible";
+
 }
+
